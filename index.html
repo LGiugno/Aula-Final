@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>ArrumAi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="caixa">
+
+  <h1>ArrumAi</h1>
+  <p class="sub">Organize suas tarefas em um só lugar</p>
+
+  <div class="form-area">
+    <label>Nova Tarefa</label>
+    <br><br>
+    <div class="linha-inputs">
+      <input type="text" id="inputTarefa" placeholder="Digite uma tarefa..." maxlength="120" />
+      <button onclick="adicionarTarefa()">Adicionar</button>
+    </div>
+    <div class="linha-extra">
+      <div class="campo-data">
+        <label>Prazo (opcional)</label>
+        <input type="date" id="inputData" />
+      </div>
+      <div class="campo-prio">
+        <label>Prioridade</label>
+        <select id="inputPrioridade">
+          <option value="baixa">Baixa</option>
+          <option value="media" selected>Média</option>
+          <option value="alta">Alta</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="stats-area">
+    <div class="stat-box">
+      <span class="numero" id="numTotal">0</span>
+      <span class="legenda">Total</span>
+    </div>
+    <div class="stat-box">
+      <span class="numero" id="numPendentes">0</span>
+      <span class="legenda">Pendentes</span>
+    </div>
+    <div class="stat-box">
+      <span class="numero" id="numFeitas">0</span>
+      <span class="legenda">Concluídas</span>
+    </div>
+  </div>
+
+  <div class="area-filtros">
+    <button id="btn-todas" class="ativo" onclick="mudarFiltro('todas')">Todas</button>
+    <button id="btn-pendentes" onclick="mudarFiltro('pendentes')">Pendentes</button>
+    <button id="btn-concluidas" onclick="mudarFiltro('concluidas')">Concluídas</button>
+  </div>
+
+  <div id="listaTarefas"></div>
+
+  <footer>Atividade Prática — Fábrica de Software | Univille</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
