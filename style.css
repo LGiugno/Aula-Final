@@ -1,0 +1,292 @@
+body {
+  background-color: #d9d9d9;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 25px;
+  font-size: 28px;
+}
+
+p.sub {
+  text-align: center;
+  color: #666;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+div.caixa {
+  width: 600px;
+  margin: 0 auto;
+}
+
+div.form-area {
+  background-color: white;
+  padding: 18px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+div.form-area label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+div.form-area input[type=text] {
+  width: 440px;
+  height: 34px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+div.form-area button {
+  height: 36px;
+  padding: 0 14px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+div.form-area button:hover {
+  background-color: #3730c4;
+}
+
+div.form-area input[type=date] {
+  height: 34px;
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+div.form-area select {
+  height: 34px;
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+div.linha-inputs {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+
+div.linha-extra {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+div.campo-data {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+div.campo-prio {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+div.stats-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+div.stat-box {
+  flex: 1;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+div.stat-box span.numero {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+div.stat-box span.legenda {
+  display: block;
+  font-size: 11px;
+  color: gray;
+}
+
+div.area-filtros {
+  margin-bottom: 10px;
+}
+
+div.area-filtros button {
+  margin-right: 5px;
+  padding: 4px 12px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+div.area-filtros button.ativo {
+  background-color: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+
+div.tarefa {
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 11px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.tarefa.alta {
+  border-left: 5px solid red;
+}
+
+div.tarefa.media {
+  border-left: 5px solid orange;
+}
+
+div.tarefa.baixa {
+  border-left: 5px solid green;
+}
+
+div.tarefa.feita {
+  background-color: #f0fff0;
+  opacity: 0.75;
+  border-left: 5px solid #ccc;
+}
+
+div.tarefa.feita span.titulo-tarefa {
+  text-decoration: line-through;
+  color: #999;
+}
+
+span.titulo-tarefa {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+}
+
+span.info-tarefa {
+  font-size: 12px;
+  color: gray;
+  display: block;
+  margin-top: 4px;
+}
+
+span.bdg {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+span.bdg-pendente {
+  background: #fff3cd;
+  color: #856404;
+}
+
+span.bdg-feita {
+  background: #d4edda;
+  color: #155724;
+}
+
+span.bdg-data {
+  background: #e0d7ff;
+  color: #4b0082;
+}
+
+span.bdg-prio-alta {
+  background: #ffe0e0;
+  color: darkred;
+}
+
+span.bdg-prio-media {
+  background: #fff3cd;
+  color: #856404;
+}
+
+span.bdg-prio-baixa {
+  background: #d4edda;
+  color: #155724;
+}
+
+button.btn-check {
+  background: white;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+button.btn-check:hover {
+  border-color: green;
+}
+
+button.btn-check.marcado {
+  background: green;
+  border-color: green;
+  color: white;
+}
+
+button.btn-del {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ccc;
+  margin-left: 8px;
+}
+
+button.btn-del:hover {
+  color: red;
+}
+
+div.lado-esquerdo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p.vazio {
+  text-align: center;
+  color: gray;
+  padding: 30px 0;
+}
